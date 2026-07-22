@@ -11,7 +11,7 @@ Run:
     uvicorn backend:app --reload --port 8000
 
 Then open:
-    http://localhost:8000/                 -> dashboard.html
+    http://localhost:8000/                 -> index.html
     http://localhost:8000/actual_fleet.html -> Actual_Fleet.html
 """
 
@@ -132,12 +132,12 @@ def rename_vehicle(old_name: str, payload: RenameInput):
 # --- Serve the two dashboard pages same-origin (no CORS needed) ---
 @app.get("/")
 def serve_dashboard():
-    return FileResponse(APP_DIR / "dashboard.html")
+    return FileResponse(APP_DIR / "index.html")
 
 
 @app.get("/dashboard.html")
 def serve_dashboard_named():
-    return FileResponse(APP_DIR / "dashboard.html")
+    return FileResponse(APP_DIR / "index.html")
 
 
 @app.get("/actual_fleet.html")
