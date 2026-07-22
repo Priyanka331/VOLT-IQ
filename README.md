@@ -19,7 +19,7 @@ It combines a multi-agent input/synthesis layer with a live fleet dashboard, so 
 ```
 Actual_Fleet.html  --POST /api/vehicles-->  backend.py  --stores in memory-->
                                                   |
-dashboard.html  <--GET /api/vehicles (polled)-----+
+index.html  <--GET /api/vehicles (polled)-----+
 ```
 
 ---
