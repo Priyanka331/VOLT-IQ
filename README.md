@@ -12,7 +12,7 @@ It combines a multi-agent input/synthesis layer with a live fleet dashboard, so 
 |---|---|
 | `Actual_Fleet.html` | Data-entry + agent layer. Enter a vehicle name plus IoT telemetry, environmental/supply conditions, and route/aero conditions. Runs an instant local preview, then POSTs the inputs to the backend for synthesis. Also includes a **Rename Vehicle** tool. |
 | `backend.py` | FastAPI backend. Runs the actual agent math (energy demand, degradation risk, SoH estimate, carbon savings vs. diesel baseline), stores the latest synthesized result per vehicle, and serves both HTML pages same-origin. |
-| `dashboard.html` | Live fleet dashboard. Polls the backend every few seconds and renders real per-vehicle data (Battery Health, Fleet Readiness map) once at least one vehicle has been submitted — falls back to a demo animation otherwise. |
+| `index.html` | Live fleet dashboard. Polls the backend every few seconds and renders real per-vehicle data (Battery Health, Fleet Readiness map) once at least one vehicle has been submitted — falls back to a demo animation otherwise. |
 
 ### How data flows
 
